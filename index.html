@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービス満足度アンケート</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Survey Form -->
+        <div class="page active" id="surveyPage">
+            <div class="header">
+                <h1>サービス満足度アンケート</h1>
+                <p>この度は弊社サービスをご利用いただき、ありがとうございました。<br>
+                今後のサービス向上のため、アンケートにご協力をお願いいたします。</p>
+            </div>
+
+            <form id="surveyForm">
+                <!-- 総合満足度 -->
+                <div class="question-group">
+                    <h3>総合満足度</h3>
+                    <p>今回のサービスについて、総合的にどの程度満足されましたか？</p>
+                    <div class="rating-group">
+                        <label class="rating-item">
+                            <input type="radio" name="overall" value="1" required>
+                            <span class="rating-text">1 - 非常に不満</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="overall" value="2" required>
+                            <span class="rating-text">2 - 不満</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="overall" value="3" required>
+                            <span class="rating-text">3 - 普通</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="overall" value="4" required>
+                            <span class="rating-text">4 - 満足</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="overall" value="5" required>
+                            <span class="rating-text">5 - 非常に満足</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- スタッフ対応 -->
+                <div class="question-group">
+                    <h3>スタッフの対応</h3>
+                    <p>スタッフの対応はいかがでしたか？</p>
+                    <div class="rating-group">
+                        <label class="rating-item">
+                            <input type="radio" name="staff" value="1" required>
+                            <span class="rating-text">1 - 非常に不満</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="staff" value="2" required>
+                            <span class="rating-text">2 - 不満</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="staff" value="3" required>
+                            <span class="rating-text">3 - 普通</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="staff" value="4" required>
+                            <span class="rating-text">4 - 満足</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="staff" value="5" required>
+                            <span class="rating-text">5 - 非常に満足</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- サービス内容 -->
+                <div class="question-group">
+                    <h3>サービス内容</h3>
+                    <p>提供されたサービスの内容について評価をお聞かせください。</p>
+                    <div class="rating-group">
+                        <label class="rating-item">
+                            <input type="radio" name="service" value="1" required>
+                            <span class="rating-text">1 - 非常に不満</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="staff" value="2" required>
+                            <span class="rating-text">2 - 不満</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="service" value="3" required>
+                            <span class="rating-text">3 - 普通</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="service" value="4" required>
+                            <span class="rating-text">4 - 満足</span>
+                        </label>
+                        <label class="rating-item">
+                            <input type="radio" name="service" value="5" required>
+                            <span class="rating-text">5 - 非常に満足</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 利用目的 -->
+                <div class="question-group">
+                    <h3>利用目的</h3>
+                    <p>今回のサービス利用の目的をお選びください。（複数選択可）</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purpose" value="business">
+                            <span class="checkbox-text">ビジネス用途</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purpose" value="personal">
+                            <span class="checkbox-text">個人利用</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purpose" value="education">
+                            <span class="checkbox-text">教育・学習</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purpose" value="research">
+                            <span class="checkbox-text">研究・調査</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purpose" value="other">
+                            <span class="checkbox-text">その他</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 利用頻度 -->
+                <div class="question-group">
+                    <h3>利用頻度</h3>
+                    <p>弊社サービスのご利用頻度をお聞かせください。</p>
+                    <div class="select-group">
+                        <select name="frequency" required>
+                            <option value="">選択してください</option>
+                            <option value="first">初回利用</option>
+                            <option value="monthly">月に1回程度</option>
+                            <option value="weekly">週に1回程度</option>
+                            <option value="daily">ほぼ毎日</option>
+                            <option value="irregular">不定期</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 特に良かった点 -->
+                <div class="question-group">
+                    <h3>特に良かった点</h3>
+                    <p>今回のサービスで特に良かった点があれば、具体的にお聞かせください。</p>
+                    <div class="textarea-group">
+                        <textarea name="good_points" placeholder="例：スタッフの対応が丁寧で、説明が分かりやすかった。"></textarea>
+                    </div>
+                </div>
+
+                <!-- 改善すべき点 -->
+                <div class="question-group">
+                    <h3>改善すべき点</h3>
+                    <p>今後のサービス向上のため、改善すべき点があればお聞かせください。</p>
+                    <div class="textarea-group">
+                        <textarea name="improvements" placeholder="例：待ち時間をもう少し短縮していただけると嬉しいです。"></textarea>
+                    </div>
+                </div>
+
+                <!-- その他のご意見 -->
+                <div class="question-group">
+                    <h3>その他のご意見・ご要望</h3>
+                    <p>何かご意見やご要望がございましたら、自由にお書きください。</p>
+                    <div class="textarea-group">
+                        <textarea name="comments" placeholder="ご自由にお書きください。"></textarea>
+                    </div>
+                </div>
+
+                <div class="submit-group">
+                    <button type="submit" class="submit-btn">アンケートを送信</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Review Request Page -->
+        <div class="page" id="reviewPage">
+            <div class="header">
+                <div class="success-icon">✓</div>
+                <h1>アンケートにご協力いただき、ありがとうございました！</h1>
+                <p>お客様からの貴重なご意見をいただき、心より感謝申し上げます。</p>
+            </div>
+
+            <div class="review-request">
+                <h2>🌟 Googleでの口コミをお願いします</h2>
+                <p>もしよろしければ、他のお客様の参考のためにも、Googleマップでの口コミ投稿にご協力をお願いいたします。</p>
+                
+                <div class="review-text-container">
+                    <h3>口コミ用文章（コピーしてご利用ください）</h3>
+                    <div class="review-text" id="reviewText">
+                        <!-- JavaScriptで生成されます -->
+                    </div>
+                    <button class="copy-btn" onclick="copyReviewText()">📋 文章をコピー</button>
+                </div>
+
+                <div class="review-actions">
+                    <a href="https://www.google.co.jp/maps/place/%E6%9D%B1%E4%BA%AC%E5%B7%A5%E6%A5%AD%E9%AB%98%E7%AD%89%E5%B0%82%E9%96%80%E5%AD%A6%E6%A0%A1/@35.63838,139.2956338,16.58z/data=!3m1!5s0x60191c1c636ef409:0x21a8d8e184eb2041!4m6!3m5!1s0x60191c1be481e4bb:0xa7e7367cc6b3fd!8m2!3d35.6386238!4d139.299028!16s%2Fg%2F1211jlmy!5m1!1e2?hl=ja&entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D" 
+                       target="_blank" class="review-btn">
+                        📍 Googleマップで口コミを投稿
+                    </a>
+                </div>
+                
+                <p class="review-note">
+                    ※ 口コミの投稿は任意です。お時間のある時にご協力いただければ幸いです。
+                </p>
+            </div>
+        </div>
+
+        <!-- Thank You Page -->
+        <div class="page" id="thankYouPage">
+            <div class="header">
+                <div class="success-icon">✓</div>
+                <h1>ご回答ありがとうございました</h1>
+                <p>貴重なご意見をいただき、誠にありがとうございます。<br>
+                今後ともどうぞよろしくお願いいたします。</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
